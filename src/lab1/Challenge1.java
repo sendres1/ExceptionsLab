@@ -16,7 +16,7 @@ import javax.swing.JOptionPane;
  * @version 1.00
  */
 public class Challenge1 {
-    private static final int LAST_NAME_IDX = 1;
+  //  private static final int LAST_NAME_IDX = 1;
 
     public static void main(String[] args) {
         Challenge1 app = new Challenge1();
