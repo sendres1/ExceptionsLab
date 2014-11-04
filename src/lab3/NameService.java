@@ -25,6 +25,8 @@ public class NameService {
             throw new IllegalArgumentException("invalid entry for full name");
         }
         String[] nameParts = fullName.split(" ");
+        if(nameParts.length < 2)
+            throw new IllegalStringLenghtException();
         return nameParts[LAST_NAME_IDX];
     }
 
@@ -35,13 +37,15 @@ public class NameService {
      * @param fullName - a name containing a first name and a last name
      * @return the first name
      */
-    public final String extractFirstName(String fullName) throws IllegalArgumentException {
+    public final String extractFirstName(String fullName) throws IllegalStringLenghtException {
         if (fullName == null || fullName.isEmpty()) {
-            throw new IllegalArgumentException("invalid entry for full name");
-
+      //      throw new IllegalArgumentException("invalid entry for full name");
+              throw new IllegalStringLenghtException();
         }
 
         String[] nameParts = fullName.split(" ");
+        if(nameParts.length < 2)
+            throw new IllegalStringLenghtException();
         return nameParts[FIRST_NAME_IDX];
     }
 
